@@ -1,0 +1,439 @@
+/* Default CSS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+}
+
+.container{
+    width: 1240px;
+    margin: auto;
+}
+
+.clear::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+a{
+    text-decoration: none;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+/* font family */
+body,h1,h2,h3,h4,h5,h6,a,p,span{
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* header-section */
+.menubar{
+    background-color:#090705;
+    height: 60px;
+}
+.menubar .logo{
+    width: 40%;
+    float: left;
+} 
+.menubar .logo img{
+    width: 200px;
+    padding: 10px 0;
+}
+
+.menubar .main-menu{
+    width: 60%;
+    float: left;
+} 
+.menubar .main-menu ul{
+    list-style: none;
+    text-align: right;
+}
+.menubar .main-menu ul li{
+    display: inline-block;
+    padding: 0px 0px;
+    position: relative;
+}
+.menubar .main-menu ul li a{ 
+    padding: 20px 15px;
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    transition: .5s;    
+    font-size: 15px;
+}
+.menubar .main-menu ul li:hover >a{ 
+    color: #c89654;
+}
+.menubar .main-menu ul.main_menu > li::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color:#c89654;
+    position: absolute;
+    left: 50%;
+    bottom: 3px;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+}  
+.menubar .main-menu ul.main_menu > li:hover::after{
+    visibility: visible;
+    opacity: 1;
+    width: 100%;
+    background-color:#c89654;
+    left: 0;
+}
+
+/* 2nd menu */
+.menubar .main-menu ul li ul{
+    width: 200px;
+    text-align: left;
+    position: absolute;
+    background-color: #f8f8f9;
+    top: 60px;
+    opacity: 0;
+    visibility: hidden;
+    transform: scaleY(0);
+    transition: .5s;
+} 
+.menubar .main-menu ul li:hover > ul{
+    opacity: 1;
+    visibility: visible;
+    transform: scaley(1);
+ }
+
+.menubar .main-menu ul li ul li{
+    display: block;
+    transition: .5s;
+}
+.menubar .main-menu ul li ul li a{
+   color: #353535;
+   display: block;
+}
+
+.menubar .main-menu ul li ul li:hover{
+    background-color: #c5c2c2
+}
+.menubar .main-menu ul li ul li:hover a{
+    color: #c89654;
+}
+
+
+/*Banner Section*/
+.banner {
+    background: url(./img/banner.jpg) no-repeat center fixed;
+    background-size: cover;      
+    color: #fafafa;
+    height: 650px;
+}
+ 
+.banner .banner-caption{ 
+    padding: 150px;
+    padding-top: 200px; 
+} 
+
+.banner .banner-caption h1{ 
+    font-size: 65px;
+    position: relative;
+}
+
+.banner-caption h3{
+    font-size: 30px;
+    margin: 10px 0;
+    position: relative;
+}
+
+
+.banner .banner-caption h3::before{
+    content: "";
+    position: absolute;
+    width: 8%;
+    height: 2px;
+    top: 20px;
+    left: 192px;
+    background-color: #fff;
+}
+
+.banner .banner-caption h3::after{
+    content: "";
+    position: absolute;
+    width: 8%;
+    height: 2px;
+    top: 20px;
+    right: 192px;
+    background-color: #fff; 
+}
+
+.button{ 
+    margin-top: 40px;   
+}  
+ 
+.button a:hover{  
+    color: #d8a340;
+    background-color: #fff;   
+}
+
+.button a{
+    padding: 10px 20px;
+    border-radius: 25px; 
+    border: none;
+    background-color: #c69453;
+    font-size: 15px; 
+    color: white;
+    transition: .5s;
+}
+
+
+/* Service Section */
+.service-section{
+    padding: 100px 0;
+    background-color: #f7f9ff;
+    height: 550px;
+}
+
+.service-items .service{
+    width: 23%;
+    margin-right: 2%; 
+    background: #fff;
+    box-shadow: 3px 4px 30px 0 rgba(98, 120, 223,.2);
+    text-align: center;
+    height: 375px;
+}
+
+
+.service-items .service .image-div img {
+    width: 40%;
+    border-radius: 10px 10px 0 0;
+    padding-top: 20px;
+}
+
+.service-head {
+    padding: 30px;
+}
+
+.service-head h4 {
+    font-size: 19px;
+    margin: 12px;
+    font-weight: 500;
+}
+
+.service-head p {
+    color: #767676;
+    font-size: 16px;
+    padding: 0 5PX;
+} 
+
+.service-button{
+    margin-top: 40px;
+}
+
+.service-button a{
+    padding: 5px 10px;
+    border: none;
+    background-color: #c69453;
+    font-size: 14px; 
+    color: white;
+    transition: .5s;
+    border-radius: 5px;
+}
+
+.service-items .service:hover{
+    background-color: #d3d0cf;    
+} 
+
+.service-items .service:hover .image-div img{
+    transform: rotateY(360deg);
+    transition: .4s;
+}
+
+.service-items .service:hover .service-button a{
+    color:#c69453;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.service-button a:hover {
+    color:white !important;
+    background-color:   black !important;
+    border-radius: 5px !important;
+}
+
+
+/*  About Section  */
+.about{
+    background: #f7f9ff;
+    padding: 100px 0;
+    height: 480px;
+}
+
+.video-left{
+    width: 48%;
+}
+
+.video-content-right{
+    width: 48%;
+}
+
+.video-content-right h3 {
+    font-size: 35px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.video-content-right p { 
+    color: #767676;
+    font-size: 15px;
+    line-height: 1.7em;
+}
+
+.color-red {
+	color: #c69453;
+}
+
+ 
+.about-button{
+    margin-top: 25px;
+}
+
+.about-button a{
+    padding: 5px 10px;
+    border: none;
+    background-color: #000;
+    font-size: 14px; 
+    color: white;
+    transition: .5s;    
+}
+
+.about-button a:hover{
+    background-color: #c69453;
+}
+
+
+/* Contact Section */
+.contact-section{
+    padding-top: 80px;
+    background-color: #f8f8f8;
+    height: 760px;
+}
+
+.contact-section .contact-form{
+    float: left;
+    width: 48%; 
+}
+
+.contact-section .contact-form h4{
+    font-size: 25px; 
+    font-weight: 500;
+    margin-bottom: 22px;
+}
+
+.contact-section .contact-form p{ 
+    font-size: 14px;
+    color: #767676;
+    line-height: 1.7;
+}
+
+.footer-contact-from .w100{
+    width: 100%;
+}
+
+.footer-contact-from .w50{
+    width: 48%
+}
+
+.footer-contact-from .default-input {
+    margin-bottom: 20px;
+    height: 40px;
+    padding-left: 15px;
+    font-size: 15px;
+}
+
+.footer-contact-from {
+    margin-top: 60px;
+}
+
+.footer-contact-from .submit-btn { 
+    margin-left: 0;
+}
+
+.footer-contact-from .textarea-input {
+    height: 200px; 
+    padding-left: 15px;
+    padding-top: 10px;
+    font-size: 15px;
+}
+
+.contact-img .site-img img{    
+    height: 680px;
+    width: 600px;
+}
+
+.submit-btn {
+    background: #c69453;  
+    font-size: 16px;
+    color: #fff;
+    padding: 10px 30px;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-block;
+    box-shadow: 3px 4px 30px 0 rgba(98, 120, 223,.2);
+    border: 2px solid transparent;
+    transition: .4s;
+}
+
+/*Footer Section*/
+.footer{
+    background: #808080;
+    color: #fff;
+    padding: 15px;
+}
+
+.footer-left{
+    float: left;
+    width: 50%;
+} 
+
+.footer-left p{
+    font-size: 16px;
+}
+.footer-right{
+    float: right;
+    width: 45%;
+}
+
+.Social-Menu{
+    text-align: right;
+}
+
+.Social-Menu li{
+    display: inline-block;
+}
+
+.Social-Menu li a{
+    color: #fff;
+    font-size: 25px;
+    margin-left: 20px;
+}
